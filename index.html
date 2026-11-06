@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PIXORA - Discover the world through beautiful photography.">
+    <title>PIXORA | Visual Discovery Gallery</title>
+
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo">PIX<span>ORA.</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <a href="#gallery" class="nav-btn">Explore Photos ↗</a>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">✦ YOUR DAILY DOSE OF INSPIRATION</span>
+
+        <h1>Every Picture<br>Tells a <span>Story.</span></h1>
+
+        <p>
+            Discover beautiful moments, explore creative photography
+            and find inspiration through our colorful image collection.
+        </p>
+
+        <a href="#gallery" class="primary-btn">Explore Gallery ↓</a>
+
+        <div class="hero-stats">
+            <div><strong id="totalPhotos">77</strong><span>Photos</span></div>
+            <div><strong>11</strong><span>Categories</span></div>
+            <div><strong>∞</strong><span>Inspiration</span></div>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900"
+            alt="Beautiful mountain landscape">
+        <div class="floating-card">✦ Explore the beauty of life</div>
+    </div>
+</section>
+
+<main class="gallery-section" id="gallery">
+
+    <div class="section-heading">
+        <span class="tag">OUR COLLECTION</span>
+        <h2>Explore the <span>Gallery.</span></h2>
+        <p>A collection of moments worth remembering.</p>
+    </div>
+
+    <div class="search-wrapper">
+        <span class="search-icon">⌕</span>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search people, animals, cars, nature..."
+            aria-label="Search gallery">
+        <button id="clearSearch" aria-label="Clear search">✕</button>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="All">✨ Everything</button>
+        <button class="filter-btn" data-category="People">👤 People</button>
+        <button class="filter-btn" data-category="Animals">🐾 Animals</button>
+        <button class="filter-btn" data-category="Vehicles">🚗 Vehicles</button>
+        <button class="filter-btn" data-category="Nature">🌿 Nature</button>
+        <button class="filter-btn" data-category="Fashion">👗 Fashion</button>
+        <button class="filter-btn" data-category="Sports">⚽ Sports</button>
+        <button class="filter-btn" data-category="Technology">💻 Technology</button>
+        <button class="filter-btn" data-category="Food">🍕 Food</button>
+        <button class="filter-btn" data-category="Travel">✈️ Travel</button>
+        <button class="filter-btn" data-category="Architecture">🏛️ Architecture</button>
+        <button class="filter-btn" data-category="Art">🎨 Art</button>
+    </div>
+
+    <div class="result-info" id="resultInfo"></div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+
+    <p class="no-results" id="noResults">
+        😕 No images found. Try another search!
+    </p>
+
+</main>
+
+<section class="about-section" id="about">
+    <span class="tag">ABOUT PIXORA</span>
+    <h2>Creativity has <span>no limits.</span></h2>
+    <p>
+        PIXORA is an interactive visual discovery platform designed
+        to make exploring photography beautiful and easy.
+        Discover people, wildlife, vehicles, nature, technology,
+        fashion and much more through an engaging gallery experience.
+    </p>
+</section>
+
+<footer>
+    <a href="#home" class="logo">PIX<span>ORA.</span></a>
+    <p>Created with ♥ by Aditi Mishra</p>
+    <p>© 2026 PIXORA. All rights reserved.</p>
+</footer>
+
+<!-- IMAGE PREVIEW -->
+<div class="modal" id="imageModal" aria-hidden="true">
+    <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+    <button class="modal-nav prev" id="prevImage" aria-label="Previous">❮</button>
+
+    <div class="modal-content">
+        <img src="" alt="" id="modalImage">
+        <h3 id="modalTitle"></h3>
+        <p id="modalCategory"></p>
+        <a id="downloadImage" class="download-btn" href="#" target="_blank" rel="noopener">
+            ⬇ View / Download Image
+        </a>
+    </div>
+
+    <button class="modal-nav next" id="nextImage" aria-label="Next">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
